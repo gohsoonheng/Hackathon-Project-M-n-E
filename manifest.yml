@@ -1,8 +1,10 @@
 ---
 applications:
 - name: hackauto
-  mem: 512M
-  services: 
-    ${name}-db:
-       type: mongodb
+  memory: 512M
+  services:
+    mongodb:
+    type: :mongodb
+ 
+   
    
