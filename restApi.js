@@ -26,9 +26,15 @@ var app = express();
     // app.use( express.errorHandler({ dumpExceptions: true, showStack: true }));
 // });
 
+f(process.env.VCAP_SERVICES){
+  var services = JSON.parse(process.env.VCAP_SERVICES);
+  var dbcreds = services['mongodb'][0].credentials;
+}
+
 
 //Connect to database
-var db = mongoose.connect('mongodb://127.0.0.1:27017/test');
+// var db = mongoose.connect('mongodb://127.0.0.1:27017/test');
+var db = mongoose.connect(dbcreds.host, dbcreds.db, dbcreds.port, {user: dbcreds.username, pass: dbcreds.password});
 
 //Schema
 var UsersSchema = new mongoose.Schema({
@@ -185,7 +191,7 @@ app.delete( '/api/users/:id', function( request, response ) {
 });
 
 //Start server
-var port = 4711;
+var port = process.env.PORT || 4711;
 app.listen( port, function() {
     console.log( 'Express server listening on port %d in %s mode', port, app.settings.env );
 });
