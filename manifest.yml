@@ -1,11 +1,7 @@
 ---
 applications:
 - name: hackauto
-  memory: 126M
+  memory: 256M
   services:
     autodb:
-    type: :mongodb 
-url:
-  - ${name}.app.helionit.es
-   
-   
+    type: :mongodb
