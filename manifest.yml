@@ -2,8 +2,5 @@
 applications:
 - name: hackgshauto
   memory: 512M
-  services:
-    autodb:
-    type: :mongodb
   domain: app.helionit.es
   
