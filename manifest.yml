@@ -1,7 +1,7 @@
 ---
 applications:
 - name: hackauto
-  memory: 125M
+  memory: 256M
   services:
     autodb:
     type: :mongodb 
