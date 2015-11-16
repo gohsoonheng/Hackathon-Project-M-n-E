@@ -5,3 +5,5 @@ applications:
   services:
     autodb:
     type: :mongodb
+  domain: app.helionit.es
+  
