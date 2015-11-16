@@ -1,6 +1,6 @@
 ---
 applications:
-- name: hackauto
+- name: hackgshauto
   memory: 256M
   services:
     autodb:
