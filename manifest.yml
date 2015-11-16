@@ -5,6 +5,7 @@ applications:
   services:
     autodb:
     type: :mongodb 
- 
+url:
+  - ${name}.app.helionit.es
    
    
