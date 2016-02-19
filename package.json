@@ -1,6 +1,6 @@
 {
   "name": "HackathonGame",
-  "description": "a simple game for learning web technology - gsh",
+  "description": "a simple game for learning web technology with HCE",
   "version": "1.0.0",
   "repository" : {
 	"type" : "git",
