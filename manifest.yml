@@ -1,7 +1,7 @@
 ---
 applications:
 - name: hack-gsh
-  memory: 256M
+  memory: 384M
   services:
     autodb: mongodb
   url: 
